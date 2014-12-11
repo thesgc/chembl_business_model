@@ -3,7 +3,7 @@ __author__ = 'mnowotka'
 from django.dispatch import receiver
 from chembl_business_model.signals import *
 from chembl_business_model.models import CompoundStructures
-from chembl_business_model.models import RecordDrugProperties
+#from chembl_business_model.models import RecordDrugProperties
 from django.conf import settings
 from django.db.models.signals import post_save
 from tasks import generateCompoundImageTask
@@ -44,9 +44,9 @@ def compoundStructurePostSaveHandler(sender, **kwargs):
 
 #-----------------------------------------------------------------------------------------------------------------------
 
-@receiver(post_save, sender=RecordDrugProperties)
-def recordDrugPropertiesPostSaveHandler(sender, **kwargs):
-    prop = kwargs['instance']
-    updateMolfileProperties(prop.record.molecule)
+#@receiver(post_save, sender=RecordDrugProperties)
+#def recordDrugPropertiesPostSaveHandler(sender, **kwargs):
+#    prop = kwargs['instance']
+#    updateMolfileProperties(prop.record.molecule)
 
 #-----------------------------------------------------------------------------------------------------------------------

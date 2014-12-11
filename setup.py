@@ -12,8 +12,8 @@ except ImportError:
     use_setuptools()
     from setuptools import setup
 
-if sys.version_info < (2, 7, 3) or sys.version_info >= (2, 7, 7):
-    raise Exception('ChEMBL software stack requires python 2.7.3 - 2.7.7')
+if sys.version_info < (2, 7, 3) or sys.version_info >= (2, 7, 9):
+    raise Exception('ChEMBL software stack requires python 2.7.3 - 2.7.9')
 
 setup(
     name='chembl_business_model',
@@ -34,7 +34,7 @@ setup(
         'BeautifulSoup==3.2.1',
         'Pillow>=2.2.1',
         'cairocffi>=0.5.1',
-        'gdb>=0.2.2',
+ #       'gdb>=0.2.2',
         'numpy>=1.8.0',
     ],
     include_package_data=False,
