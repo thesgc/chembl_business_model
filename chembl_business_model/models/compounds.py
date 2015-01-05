@@ -192,10 +192,10 @@ class CompoundStructures(core.CompoundStructures):
                 if not new: # The structure already exists and we only want to modify it
                     super(CompoundStructures, self).save(force_insert, force_update, *args, **kwargs) # this should trigger CMPD_STR_UPDATE_TRIG, which deletes compound images and properties and nulls standard inchi, key, smiles, and molformula
                     changed = True
-                newInchi = inchiFromPipe(self.molfile, settings.INCHI_BINARIES_LOCATION['1.02'])
-                if newInchi != self.standard_inchi:
-                    self.standard_inchi = newInchi
-                    changed = True
+             #   newInchi = inchiFromPipe(self.molfile, settings.INCHI_BINARIES_LOCATION['1.02'])
+                #if newInchi != self.standard_inchi:
+                 #   self.standard_inchi = newInchi
+                  #  changed = True
 
             if not self.standard_inchi:
                 raise NoStandardInchi("for CompundStructure, pk = " + str(self.pk))
