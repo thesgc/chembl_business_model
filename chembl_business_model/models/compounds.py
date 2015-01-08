@@ -196,7 +196,8 @@ class CompoundStructures(core.CompoundStructures):
                 #if newInchi != self.standard_inchi:
                  #   self.standard_inchi = newInchi
                   #  changed = True
-
+            mol = MolFromInchi(self.standard_inchi)
+            self.canonical_smiles = MolToSmiles(mol)
             if not self.standard_inchi:
                 raise NoStandardInchi("for CompundStructure, pk = " + str(self.pk))
 
