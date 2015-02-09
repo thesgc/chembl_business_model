@@ -24,21 +24,21 @@ def compoundStructurePostSaveHandler(sender, **kwargs):
 
     if settings.OPEN_SOURCE:
         if CELERY_ON:
-            generateCompoundImageTask.delay(struct)
+            #generateCompoundImageTask.delay(struct)
             generateCompoundPropertiesTask.delay(struct)
             generateMoleculeHierarchyTask.delay(struct)
 
         else:
-            generateCompoundImageTask(struct)
+            #generateCompoundImageTask(struct)
             generateCompoundPropertiesTask(struct)
             generateMoleculeHierarchyTask(struct)
     else:
         if CELERY_ON:
-            getCompoundImageFromPipelinePilot.delay(struct)
+            #getCompoundImageFromPipelinePilot.delay(struct)
             getCompoundPropertiesFromPipelinePilot.delay(struct)
             generateMoleculeHierarchyFromPipelinePilot.delay(struct)
         else:
-            getCompoundImageFromPipelinePilot(struct)
+            #getCompoundImageFromPipelinePilot(struct)
             getCompoundPropertiesFromPipelinePilot(struct)
             generateMoleculeHierarchyFromPipelinePilot(struct)
 
