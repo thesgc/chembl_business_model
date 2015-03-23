@@ -7,7 +7,7 @@ from django.db import models, migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('chembl_core_model', '0001_initial'),
+        ('chembl_core_model', '0002_auto_20150323_0929'),
     ]
 
     operations = [
