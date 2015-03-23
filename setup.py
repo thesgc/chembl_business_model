@@ -3,8 +3,6 @@
 
 __author__ = 'mnowotka'
 
-import sys
-
 try:
     from setuptools import setup
 except ImportError:
@@ -12,18 +10,16 @@ except ImportError:
     use_setuptools()
     from setuptools import setup
 
-if sys.version_info < (2, 7, 3) or sys.version_info >= (2, 7, 9):
-    raise Exception('ChEMBL software stack requires python 2.7.3 - 2.7.9')
 
 setup(
     name='chembl_business_model',
-    version='0.5.18',
+    version='0.5.19',
     author='Michal Nowotka',
     platforms=['Linux'],
     author_email='mnowotka@ebi.ac.uk',
     description='Python package providing chembl webservices API.',
     url='https://www.ebi.ac.uk/chembl/',
-    license='CC BY-SA 3.0',
+    license='Apache Software License',
     packages=['chembl_business_model',
               'chembl_business_model.models'],
     long_description=open('README.rst').read(),
@@ -42,7 +38,7 @@ setup(
                  'Environment :: Web Environment',
                  'Framework :: Django',
                  'Intended Audience :: Developers',
-                 'License :: Creative Commons :: Attribution-ShareAlike 3.0 Unported',
+                 'License :: OSI Approved :: Apache Software License',
                  'Operating System :: POSIX :: Linux',
                  'Programming Language :: Python :: 2.7',
                  'Topic :: Scientific/Engineering :: Chemistry'],
