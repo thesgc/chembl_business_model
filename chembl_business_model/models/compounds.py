@@ -60,14 +60,14 @@ class CompoundRecords(core.CompoundRecords):
 
 #-----------------------------------------------------------------------------------------------------------------------
 
-#class RecordDrugProperties(core.RecordDrugProperties):
+class RecordDrugProperties(core.RecordDrugProperties):
 
-#    haystack_index = []
- #   api_exclude = []
-#
- #   class Meta:
- #       proxy = True
- #       app_label = 'chembl_business_model'
+    haystack_index = []
+    api_exclude = []
+
+    class Meta:
+        proxy = True
+        app_label = 'chembl_business_model'
 
 #-----------------------------------------------------------------------------------------------------------------------
 
