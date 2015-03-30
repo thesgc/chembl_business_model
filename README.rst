@@ -1,13 +1,25 @@
 chembl_business_model
 ======
 
-.. image:: https://pypip.in/v/chembl_business_model/badge.png
-    :target: https://crate.io/packages/chembl_business_model/
-    :alt: Latest PyPI version
+.. image:: https://pypip.in/version/chembl_business_model/badge.svg
+    :target: https://pypi.python.org/pypi/chembl_business_model/
+    :alt: Latest Version
 
-.. image:: https://pypip.in/d/chembl_business_model/badge.png
-    :target: https://crate.io/packages/chembl_business_model/
-    :alt: Number of PyPI downloads
+.. image:: https://pypip.in/download/chembl_business_model/badge.svg
+    :target: https://pypi.python.org/pypi/chembl_business_model/
+    :alt: Downloads
+
+.. image:: https://pypip.in/py_versions/chembl_business_model/badge.svg
+    :target: https://pypi.python.org/pypi/chembl_business_model/
+    :alt: Supported Python versions
+
+.. image:: https://pypip.in/status/chembl_business_model/badge.svg
+    :target: https://pypi.python.org/pypi/chembl_business_model/
+    :alt: Development Status
+
+.. image:: https://pypip.in/license/chembl_business_model/badge.svg
+    :target: https://pypi.python.org/pypi/chembl_business_model/
+    :alt: License
     
 .. image:: https://badge.waffle.io/chembl/chembl_business_model.png?label=ready&title=Ready 
  :target: https://waffle.io/chembl/chembl_business_model
