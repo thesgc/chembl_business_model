@@ -5,7 +5,7 @@ from rdkit import Chem
 from rdkit.Chem import AllChem
 from rdkit.Chem import Draw
 from rdkit import RDLogger
-import pybel
+from pybel import ob, readstring
 from indigoWrapper import *
 import requests
 from django.utils.http import urlquote
@@ -19,7 +19,7 @@ import os
 
 lg = RDLogger.logger()
 lg.setLevel(RDLogger.CRITICAL)
-pybel.ob.obErrorLog.SetOutputLevel(0)
+ob.obErrorLog.SetOutputLevel(0)
 
 INCHI_SPECIAL_CHARS = '={}()-/,;+?.'
 
@@ -281,7 +281,7 @@ def checkPybelInchi(struct):
         return
 
     try:
-        mol = pybel.readstring('mol', str(struct.molfile))
+        mol = readstring('mol', str(struct.molfile))
         inchi = mol.write('inchi')
 
         if inchi.strip() != struct.standard_inchi:
