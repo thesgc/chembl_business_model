@@ -210,17 +210,15 @@ def generateCompoundPropertiesTask(structure, debug=False):
     prop.alogp = Crippen.MolLogP(mol)
     prop.psa = Descriptors.CalcTPSA(mol)
     prop.full_mwt = Descriptors.CalcExactMolWt(mol)
+    # prop.exact_mass = Descriptors.CalcExactMolWt(mol)
+
     if base.GetNumAtoms():
         prop.mw_freebase = Descriptors.CalcExactMolWt(base)
 
+    
+    prop.full_molformula = Descriptors.CalcMolFormula(mol)
+    
     try:
-        mol2 = indigoObj.loadMolecule(str(structure.molfile))
-        prop.full_molformula = mol2.grossFormula()
-    except:
-        pass # TODO : handle this problem in smarter way
-
-    try:
-        print "saving"
         prop.save()
 
     except IntegrityError as e:
