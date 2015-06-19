@@ -196,15 +196,15 @@ class CompoundStructures(core.CompoundStructures):
                 #if newInchi != self.standard_inchi:
                  #   self.standard_inchi = newInchi
                   #  changed = True
-            mol = MolFromInchi(self.standard_inchi)
+            mol = MolFromInchi(self.standard_inchi.encode("ascii"))
             self.canonical_smiles = MolToSmiles(mol)
             if not self.standard_inchi:
                 raise NoStandardInchi("for CompundStructure, pk = " + str(self.pk))
 
-            newInchiKey = InchiToInchiKey(self.standard_inchi)
+            newInchiKey = InchiToInchiKey(self.standard_inchi.encode("ascii"))
             if self.standard_inchi_key != newInchiKey:
                 self.standard_inchi_key = newInchiKey
-                mol = MolFromInchi(self.standard_inchi)
+                mol = MolFromInchi(self.standard_inchi.encode("ascii"))
                 self.canonical_smiles = MolToSmiles(mol)
                 changed = True
                 self.molfile = MolToMolBlock(MolFromMolBlock(str(self.molfile))) # This is how we do kekulisation in RDKit...
@@ -233,7 +233,7 @@ class CompoundStructures(core.CompoundStructures):
                 raise NoStandardInchi("for CompundStructure, pk = " + str(self.pk))
 
             if not self.standard_inchi_key:
-                self.standard_inchi_key = InchiToInchiKey(self.standard_inchi)
+                self.standard_inchi_key = InchiToInchiKey(self.standard_inchi.encode("ascii"))
 
             self.clean_fields()
             self.validate_unique()
