@@ -1,29 +1,30 @@
 chembl_business_model
 ======
 
-.. image:: https://pypip.in/version/chembl_business_model/badge.svg
+
+.. image:: https://img.shields.io/pypi/v/chembl_business_model.svg
     :target: https://pypi.python.org/pypi/chembl_business_model/
     :alt: Latest Version
 
-.. image:: https://pypip.in/download/chembl_business_model/badge.svg
+.. image:: https://img.shields.io/pypi/dm/chembl_business_model.svg
     :target: https://pypi.python.org/pypi/chembl_business_model/
     :alt: Downloads
 
-.. image:: https://pypip.in/py_versions/chembl_business_model/badge.svg
+.. image:: https://img.shields.io/pypi/pyversions/chembl_business_model.svg
     :target: https://pypi.python.org/pypi/chembl_business_model/
     :alt: Supported Python versions
 
-.. image:: https://pypip.in/status/chembl_business_model/badge.svg
+.. image:: https://img.shields.io/pypi/status/chembl_business_model.svg
     :target: https://pypi.python.org/pypi/chembl_business_model/
     :alt: Development Status
 
-.. image:: https://pypip.in/license/chembl_business_model/badge.svg
+.. image:: https://img.shields.io/pypi/l/chembl_business_model.svg
     :target: https://pypi.python.org/pypi/chembl_business_model/
     :alt: License
-    
+
 .. image:: https://badge.waffle.io/chembl/chembl_business_model.png?label=ready&title=Ready 
  :target: https://waffle.io/chembl/chembl_business_model
- :alt: 'Stories in Ready'    
+ :alt: 'Stories in Ready' 
 
 This is chembl_business_model package developed at Chembl group, EMBL-EBI, Cambridge, UK.
 
