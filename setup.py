@@ -21,7 +21,8 @@ setup(
     url='https://www.ebi.ac.uk/chembl/',
     license='Apache Software License',
     packages=['chembl_business_model',
-              'chembl_business_model.models'],
+              'chembl_business_model.models',
+              'chembl_business_model.migrations'],
     long_description=open('README.rst').read(),
     install_requires=[
         'requests',
