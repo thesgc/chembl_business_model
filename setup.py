@@ -26,7 +26,6 @@ setup(
     long_description=open('README.rst').read(),
     install_requires=[
         'requests',
-        'chembl_core_model>=0.5.8',
         'django-celery',
         'BeautifulSoup==3.2.1',
         'Pillow>=2.2.1',
