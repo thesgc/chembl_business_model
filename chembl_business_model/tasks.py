@@ -191,7 +191,6 @@ def getCompoundPropertiesFromPipelinePilot(struct, debug=False):
 
 @conditional_decorator(shared_task, CELERY_ON)
 def generateCompoundPropertiesTask(structure, debug=False):
-    print "saving props"
     if debug:
         pydevd.settrace('localhost', port=6901, stdoutToServer=True, stderrToServer=True)
 
