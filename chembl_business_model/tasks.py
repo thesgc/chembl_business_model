@@ -6,6 +6,8 @@ from rdkit.Chem import Draw
 from rdkit.Chem import Crippen
 from rdkit.Chem.rdmolfiles import MolToMolBlock
 from rdkit.Chem import rdMolDescriptors as Descriptors
+from rdkit.Chem import Descriptors as NewDescriptors
+
 from rdkit.Chem.SaltRemover import SaltRemover
 from chembl_business_model.indigoWrapper import indigoObj
 from django.core.exceptions import ValidationError
@@ -208,11 +210,11 @@ def generateCompoundPropertiesTask(structure, debug=False):
     prop.rtb = Descriptors.CalcNumRotatableBonds(mol)
     prop.alogp = Crippen.MolLogP(mol)
     prop.psa = Descriptors.CalcTPSA(mol)
-    prop.full_mwt = Descriptors.CalcExactMolWt(mol)
+    prop.full_mwt = NewDescriptors.MolWt(mol)
     # prop.exact_mass = Descriptors.CalcExactMolWt(mol)
 
     if base.GetNumAtoms():
-        prop.mw_freebase = Descriptors.CalcExactMolWt(base)
+        prop.mw_freebase = NewDescriptors.MolWt(base)
 
     
     prop.full_molformula = Descriptors.CalcMolFormula(mol)
