@@ -58,7 +58,7 @@ class DjangoCheatSheet(ChemblAppAbstractModel):
     filePathField = models.FilePathField()
     floatField = models.FloatField()
     integerField = models.IntegerField()
-    ipAddressField = models.IPAddressField()
+    ipAddressField = models.GenericIPAddressField()
     genericIPAddressField = models.GenericIPAddressField()
     nullBooleanField = models.NullBooleanField()
     positiveIntegerField = models.PositiveIntegerField()
